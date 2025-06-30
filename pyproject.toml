@@ -1,0 +1,17 @@
+[project]
+name = "movie-ticket-booking"
+version = "0.1.0"
+description = "MCP server for booking movie tickets for different groups"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [ "mcp>=1.10.1",]
+[[project.authors]]
+name = "sukumarp2022"
+email = "sukumar.p@infomagnus.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+movie-ticket-booking = "movie_ticket_booking:main"

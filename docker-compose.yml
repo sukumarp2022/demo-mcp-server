@@ -1,0 +1,26 @@
+services:
+  movie-ticket-booking-mcp:
+    build: .
+    container_name: movie-ticket-booking-mcp-server
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app/src
+    volumes:
+      # Mount a volume for persistent booking data if needed
+      - booking_data:/app/data
+    # For stdio mode, we typically don't expose ports
+    # ports:
+    #   - "8080:8080"
+    
+    # Health check to ensure container is running properly
+    healthcheck:
+      test: ["CMD", "python", "-c", "import movie_ticket_booking; print('Server healthy')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  booking_data:
+    driver: local

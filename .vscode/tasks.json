@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Movie Ticket Booking MCP Server",
+			"type": "shell",
+			"command": "uv",
+			"args": [
+				"run",
+				"movie-ticket-booking"
+			],
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

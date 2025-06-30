@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "movie-ticket-booking": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "movie-ticket-booking"]
+    }
+  }
+}
