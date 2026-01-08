@@ -1,0 +1,7 @@
+name: CI
+
+on: [push]
+
+jobs:
+  ci:
+    uses: sukumarp2022/.github/.github/workflows/republish-packages.yml@main
